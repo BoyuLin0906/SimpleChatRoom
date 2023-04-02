@@ -26,3 +26,6 @@
 4. User service (DB + API)
 5. Chat room history
 6. Use message queue to send message
+
+## Ref
+- Gorilla websocket chat example :  https://github.com/gorilla/websocket/tree/master/examples/chat
