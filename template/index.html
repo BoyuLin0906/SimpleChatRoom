@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Chat Room</title>
+    </head>
+    <body>
+        <h1>Simple Chat Room</h1>
+        <label>Please enter your name:</label>
+        <input type="text" id="username">
+        <button onclick="connectToChat()">Join Chat</button>
+        <hr>
+        <input type="text" id="message">
+        <button onclick="sendMessage()" id="sendBtn">Send</button>
+        <div id="chat_box"></div>
+    </body>
+    <script src="js/websocket.js"></script>
+    <script>
+        var chat_box = document.getElementById("chat_box");
+        var chat_message = document.getElementById("message");
+        var username = document.getElementById("username");
+
+        chat_message.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("sendBtn").click();
+            }
+        });
+    </script>
+</html>
